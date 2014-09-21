@@ -1,0 +1,21 @@
+module Lab1_Part5 (SW, HEX0);
+	input [17:0] SW; // toggle switches
+	output [0:6] HEX0; // 7-seg displays
+	wire [2:0] M;
+	mux_3bit_5to1 M0 (SW[17:15], SW[14:12], SW[11:9], SW[8:6], SW[5:3], SW[2:0], M);
+	char_7seg H0 (M, HEX0);
+endmodule
+
+// implements a 3-bit wide 5-to-1 multiplexer
+module mux_3bit_5to1 (S, U, V, W, X, Y, M);
+	input [2:0] S, U, V, W, X, Y;
+	output [2:0] M;
+
+endmodule
+
+// implements a 7-segment decoder for H, E, L, O, and ‘blank’
+module char_7seg (C, Display);
+	input [2:0] C; // input code
+	output [0:6] Display; // output 7-seg code
+
+endmodule

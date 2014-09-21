@@ -1,0 +1,17 @@
+module Lab1_Part3(SW,LEDR,LEDG);
+	input [17:0] SW;
+	output [17:0] LEDR;
+	output [2:0] LEDG;
+	wire s2,s1,s0,m; // for the selection and output of the MUX
+	wire U,V,W,X,Y;
+	
+	//The thre selection switches
+	assign s2 = SW[17];
+	assign s1 = SW[16];
+	assign s0 = SW[15];
+	
+	//Setup the last 15 switches to each of the inputs
+	
+	assign LEDR = SW;
+
+endmodule

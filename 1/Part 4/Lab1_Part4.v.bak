@@ -1,0 +1,29 @@
+module TOC_TEST (SW, KEY, LEDR, HEX0);
+	input [17:0] SW; //18 Switches on the board
+	input [3:0] KEY; //4 Push button switches
+	output [17:0] LEDR; //Output to 18 LEDS
+	output [6:0] HEX0; //Output for the 7seg
+	wire [3:0] DBUS, RegAQ, RegBQ, F, SEL, RegRQ;
+	wire RegAWn, RegBWn, RegRWn, Clock, Clockn, Cout;
+	
+	assign LEDR [3:0] = RegAQ [3:0]; //Assign the first 4 LEDS to be Reg A output
+	assign LEDR [7:4] = RegBQ [3:0];
+	assign Clockn = !Clock; //Assign the variable clockn to be not clock
+	assign RegAWn = SW[4], Clock = KEY[0]; //The write enable is controlled by Switch 5, Clock when Key[0] is pressed
+	assign RegBWn = SW[5];
+	assign LEDR [16:13] = RegRQ [3:0]; //Use 4 leds for the outputs of RegR
+	assign RegRWn = SW[10]; //Write enable of register R
+	
+	//For the ALU
+	assign SEL = SW[9:6]; //Three wires SEL will be whatever is on switches 6-9
+	assign LEDR[11:8] = F; //Assign four output LED's to F
+	assign Cout = LEDR[12];
+	
+	//Assign each spot on the bus to a specific switch
+	assign DBUS[3:0] = SW[3:0];
+	reg4 AReg (DBUS, RegAWn, Clockn, RegAQ); //Registering register 4, calling the method and passing parameters
+	reg4 BReg (DBUS, RegBWn, Clockn, RegBQ); //Registering register 4, calling the method and passing parameters
+	alu4 ALU (RegAQ, RegBQ, SEL, Cout, F); //Drop in an ALU
+	reg4 RReg (F, RegRWn, Clockn, RegRQ); //Registering R Reg.
+	SevenSegmentDisplayDecoder Seg (RegRQ, HEX0);
+endmodule
