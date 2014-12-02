@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Eric\Dropbox\School\4th Year 1st Semester\Digital Systems Implementation (ECE 4740)\Labs\3\Part 1\simulation\qsim
+vLab3_Part1
+Z1 I51km3Pe;>^oLTaSzf>eHC3
+Z2 VjmCzk4RcLT=e?id7T=Afh2
+Z3 dC:\Users\Eric\Dropbox\School\4th Year 1st Semester\Digital Systems Implementation (ECE 4740)\Labs\3\Part 1\simulation\qsim
+Z4 w1412124622
+Z5 8Lab3_Part1.vo
+Z6 FLab3_Part1.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Lab3_Part1.vo|
+Z9 o-work work -O0
+Z10 n@lab3_@part1
+!i10b 1
+Z11 !s100 ]B[B=9bfMI6AFP6SPhE320
+!s85 0
+Z12 !s108 1412124625.565000
+Z13 !s107 Lab3_Part1.vo|
+!s101 -O0
+vLab3_Part1_vlg_check_tst
+!i10b 1
+Z14 !s100 ;k[oaeJJIa>i;BLf0@2[40
+Z15 I?IzK^E[Qj_UM55RDR]RCH0
+Z16 V2ZN1G1BoVc6MZ0W_iRVEl0
+R3
+Z17 w1412124621
+Z18 8Lab3_Part1.vt
+Z19 FLab3_Part1.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z20 !s108 1412124626.151000
+Z21 !s107 Lab3_Part1.vt|
+Z22 !s90 -work|work|Lab3_Part1.vt|
+!s101 -O0
+R9
+Z23 n@lab3_@part1_vlg_check_tst
+vLab3_Part1_vlg_sample_tst
+!i10b 1
+Z24 !s100 I8K@Q?M7>z<PK9cJhlCMO3
+Z25 IXZ7G8LRke0imUA6A_9TY30
+Z26 V^dF[_mfigDh=Y8;gick981
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 n@lab3_@part1_vlg_sample_tst
+vLab3_Part1_vlg_vec_tst
+!i10b 1
+Z28 !s100 Fz6SdD6kH=1^A>8>4_EIN2
+Z29 I?HQ9hdTU9jeN[1A^M?gXI2
+Z30 Ve^bB5`8Q>ziW4eoMhUcd43
+R3
+R17
+R18
+R19
+Z31 L0 256
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z32 n@lab3_@part1_vlg_vec_tst

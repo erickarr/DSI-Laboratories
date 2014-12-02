@@ -1,0 +1,25 @@
+module Lab3_Part2(SW,LEDR,LEDG,KEY);
+	input [17:0] SW;
+	input [1:0] KEY;
+	output [17:0] LEDR;
+	output [7:0] LEDG;
+	
+	d_flip_flop(SW[0],~KEY[1],LEDG[1],LEDG[0]);
+	
+	assign LEDR = SW;
+endmodule
+
+module d_flip_flop(D,clk,Q,Qbar);
+	input D,clk;
+	output Q,Qbar;
+	
+	wire R,S,R_g,S_g;
+	
+	assign S = D;
+	assign R = ~D;	
+	assign R_g = R & clk;
+	assign S_g = S & clk;
+	
+	nor(Q,R_g,Qbar);
+	nor(Qbar,S_g,Q);
+endmodule

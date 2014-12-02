@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Lab1_Part6
-Fri Sep 19 14:00:20 2014
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Sun Sep 28 14:02:54 2014
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -11,7 +11,6 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
   5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,8 +36,8 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Sep 19 14:00:20 2014               ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Failed - Sun Sep 28 14:02:54 2014               ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Lab1_Part6                                      ;
 ; Top-level Entity Name              ; Lab1_Part6                                      ;
 ; Family                             ; Cyclone II                                      ;
@@ -154,29 +153,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Sep 19 14:00:19 2014
+    Info: Processing started: Sun Sep 28 14:02:53 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab1_Part6 -c Lab1_Part6
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 3 design units, including 3 entities, in source file lab1_part6.v
-    Info (12023): Found entity 1: Lab1_Part6
-    Info (12023): Found entity 2: mux_3bit_5to1
-    Info (12023): Found entity 3: char_7seg
-Info (12127): Elaborating entity "Lab1_Part6" for the top level hierarchy
-Error (10663): Verilog HDL Port Connection error at Lab1_Part6.v(30): output or inout port "Display" must be connected to a structural net expression File: C:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/Lab1_Part6.v Line: 30
-Error (12153): Can't elaborate top-level user hierarchy
-Info (144001): Generated suppressed messages file C:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/output_files/Lab1_Part6.map.smsg
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 433 megabytes
-    Error: Processing ended: Fri Sep 19 14:00:20 2014
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/output_files/Lab1_Part6.map.smsg.
+Error (10170): Verilog HDL syntax error at Lab1_Part6.v(32) near text "(";  expecting ";" File: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/Lab1_Part6.v Line: 32
+Error (10170): Verilog HDL syntax error at Lab1_Part6.v(33) near text "(";  expecting ";" File: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/Lab1_Part6.v Line: 33
+Error (10170): Verilog HDL syntax error at Lab1_Part6.v(34) near text "(";  expecting ";" File: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/Lab1_Part6.v Line: 34
+Error (10170): Verilog HDL syntax error at Lab1_Part6.v(35) near text "(";  expecting ";" File: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/Lab1_Part6.v Line: 35
+Error (10170): Verilog HDL syntax error at Lab1_Part6.v(36) near text "(";  expecting ";" File: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/Lab1_Part6.v Line: 36
+Error (10170): Verilog HDL syntax error at Lab1_Part6.v(37) near text "(";  expecting ";" File: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/Lab1_Part6.v Line: 37
+Error (10170): Verilog HDL syntax error at Lab1_Part6.v(38) near text "(";  expecting ";" File: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/Lab1_Part6.v Line: 38
+Error (10170): Verilog HDL syntax error at Lab1_Part6.v(39) near text "(";  expecting ";" File: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/Lab1_Part6.v Line: 39
+Error (10170): Verilog HDL syntax error at Lab1_Part6.v(54) near text ")";  expecting ":", or "," File: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/Lab1_Part6.v Line: 54
+Error (10170): Verilog HDL syntax error at Lab1_Part6.v(55) near text ";";  expecting ":", or "," File: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/Lab1_Part6.v Line: 55
+Error (10170): Verilog HDL syntax error at Lab1_Part6.v(70) near text "endmodule";  expecting "end" File: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/Lab1_Part6.v Line: 70
+Error (10170): Verilog HDL syntax error at Lab1_Part6.v(74) near text "input";  expecting "end" File: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/Lab1_Part6.v Line: 74
+Error (10170): Verilog HDL syntax error at Lab1_Part6.v(89) near text "endmodule";  expecting "end" File: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/1/Part 6/Lab1_Part6.v Line: 89
+Info (12021): Found 0 design units, including 0 entities, in source file lab1_part6.v
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 13 errors, 1 warning
+    Error: Peak virtual memory: 338 megabytes
+    Error: Processing ended: Sun Sep 28 14:02:55 2014
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:02
 
 

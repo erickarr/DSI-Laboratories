@@ -1,0 +1,6 @@
+module Lab2_Part3(SW,LEDR,LEDG);
+	input [8:0] SW;
+	output [8:0] LEDR;
+	output [7:0] LEDG;
+	
+endmodule

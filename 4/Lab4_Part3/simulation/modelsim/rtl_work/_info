@@ -1,0 +1,26 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Eric\Dropbox\School\4th Year 1st Semester\Digital Systems Implementation (ECE 4740)\Labs\4\Lab4_Part3\simulation\modelsim
+vLab4_Part3
+!i10b 1
+!s100 bfA4UDbEldkI;MinXNao81
+InW5U;K2U8:>F0JIW7R5952
+V]Q;g4[fM_;6QjQ0JJIGVn2
+Z1 dC:\Users\Eric\Dropbox\School\4th Year 1st Semester\Digital Systems Implementation (ECE 4740)\Labs\4\Lab4_Part3\simulation\modelsim
+w1413060369
+8C:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part3/Lab4_Part3.v
+FC:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part3/Lab4_Part3.v
+L0 39
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1413060579.049000
+!s107 C:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part3/Lab4_Part3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part3|C:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part3/Lab4_Part3.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work {+incdir+C:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part3} -O0
+n@lab4_@part3

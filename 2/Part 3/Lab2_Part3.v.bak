@@ -1,0 +1,16 @@
+module Lab2_Part3(SW,LEDR,LEDG);
+	input [8:0] SW;
+	output [8:0] LEDR;
+	output [7:0] LEDG;
+
+	wire [3:0] a, b;
+	wire cin;
+	
+	assign cin = SW[8];
+	assign a = SW[3:0];
+	assign b = SW[7:4];
+	
+	assign LEDG[0] = a[0] ^ b[0] ^ cin;
+ 	
+	assign LEDR = SW;
+endmodule

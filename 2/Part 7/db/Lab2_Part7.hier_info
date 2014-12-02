@@ -1,0 +1,72 @@
+|Lab2_Part7
+SW[0] => ones[0].IN1
+SW[1] => LessThan2.IN8
+SW[1] => Add2.IN8
+SW[1] => ones.DATAA
+SW[1] => LEDR[1].DATAIN
+SW[2] => LessThan1.IN8
+SW[2] => Add1.IN8
+SW[2] => ones.DATAA
+SW[2] => LEDR[2].DATAIN
+SW[3] => LessThan0.IN6
+SW[3] => Add0.IN6
+SW[3] => ones.DATAA
+SW[3] => LEDR[3].DATAIN
+SW[4] => LessThan0.IN5
+SW[4] => Add0.IN5
+SW[4] => ones.DATAA
+SW[4] => LEDR[4].DATAIN
+SW[5] => LessThan0.IN4
+SW[5] => Add0.IN4
+SW[5] => ones.DATAA
+SW[5] => LEDR[5].DATAIN
+LEDR[0] <= ones[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= SW[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= SW[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= SW[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= SW[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX1[0] <= hexDisplay:h1.port1
+HEX1[1] <= hexDisplay:h1.port1
+HEX1[2] <= hexDisplay:h1.port1
+HEX1[3] <= hexDisplay:h1.port1
+HEX1[4] <= hexDisplay:h1.port1
+HEX1[5] <= hexDisplay:h1.port1
+HEX1[6] <= hexDisplay:h1.port1
+HEX0[0] <= hexDisplay:h0.port1
+HEX0[1] <= hexDisplay:h0.port1
+HEX0[2] <= hexDisplay:h0.port1
+HEX0[3] <= hexDisplay:h0.port1
+HEX0[4] <= hexDisplay:h0.port1
+HEX0[5] <= hexDisplay:h0.port1
+HEX0[6] <= hexDisplay:h0.port1
+
+
+|Lab2_Part7|hexDisplay:h1
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+hex[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2_Part7|hexDisplay:h0
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+hex[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

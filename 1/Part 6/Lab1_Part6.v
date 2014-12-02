@@ -21,18 +21,31 @@ module Lab1_Part6 (SW, LEDR, HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0);
 	
 	//U, V, W, X, Y
 	mux_3bit_5to1 m0 (SW[17:15], SW[14:12], SW[11:9], SW[8:6], SW[5:3], SW[2:0], M0);
-	/*mux_3bit_5to1 m1 (SW[17:15], SW[2:0], SW[14:12], SW[11:9], SW[8:6], SW[5:3], M1);
+	mux_3bit_5to1 m1 (SW[17:15], SW[2:0], SW[14:12], SW[11:9], SW[8:6], SW[5:3], M1);
 	mux_3bit_5to1 m2 (SW[17:15], SW[5:3], SW[2:0], SW[14:12], SW[11:9], SW[8:6], M2);
 	mux_3bit_5to1 m3 (SW[17:15], SW[8:6], SW[5:3], SW[2:0], SW[14:12], SW[11:9], M3);
-	mux_3bit_5to1 m4 (SW[17:15], SW[11:9], SW[8:6], SW[5:3], SW[2:0], SW[14:12], M4);*/
+	mux_3bit_5to1 m4 (SW[17:15], SW[11:9], SW[8:6], SW[5:3], SW[2:0], SW[14:12], M4);
 	
-	char_7seg H0 (M0, HEX0);
-	char_7seg H1 (M1, HEX1);
-	char_7seg H2 (M2, HEX2);
-	char_7seg H3 (M3, HEX3);
-	char_7seg H4 (M4, HEX4);
-	/*char_7seg H5 (M5, HEX5);
-	char_7seg H6 (M6, HEX6);*/
+	always @ (S) begin
+		case(S)
+			3'b000: begin
+				char_7seg H0 (M0, HEX0);
+				char_7seg H1 (M1, HEX1);
+				char_7seg H2 (M2, HEX2);
+				char_7seg H3 (M3, HEX3);
+				char_7seg H4 (M4, HEX4);
+				char_7seg H5 (7'b1111111, HEX5);
+				char_7seg H6 (7'b1111111, HEX6);
+				char_7seg H7 (7'b1111111, HEX7);
+			end
+			/*3'b001:;
+			3'b010:;
+			3'b011:;
+			3'b100:;
+			3'b101:;
+			3'b110:;
+			3'b111:;*/
+	end
 	
 	assign LEDR = SW;
 endmodule

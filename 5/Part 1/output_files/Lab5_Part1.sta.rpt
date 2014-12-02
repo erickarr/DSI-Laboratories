@@ -1,0 +1,795 @@
+TimeQuest Timing Analyzer report for Lab5_Part1
+Sun Oct 12 10:44:25 2014
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'KEY[2]'
+ 12. Slow Model Hold: 'KEY[2]'
+ 13. Slow Model Minimum Pulse Width: 'KEY[2]'
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Fast Model Setup Summary
+ 17. Fast Model Hold Summary
+ 18. Fast Model Recovery Summary
+ 19. Fast Model Removal Summary
+ 20. Fast Model Minimum Pulse Width Summary
+ 21. Fast Model Setup: 'KEY[2]'
+ 22. Fast Model Hold: 'KEY[2]'
+ 23. Fast Model Minimum Pulse Width: 'KEY[2]'
+ 24. Clock to Output Times
+ 25. Minimum Clock to Output Times
+ 26. Multicorner Timing Analysis Summary
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Setup Transfers
+ 30. Hold Transfers
+ 31. Report TCCS
+ 32. Report RSKM
+ 33. Unconstrained Paths
+ 34. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Lab5_Part1                                                        ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; KEY[2]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { KEY[2] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 347.46 MHz ; 347.46 MHz      ; KEY[2]     ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; KEY[2] ; -1.878 ; -12.741       ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; KEY[2] ; 0.535 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; KEY[2] ; -1.222 ; -12.222              ;
++--------+--------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'KEY[2]'                                                                                                                               ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.878 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.795      ;
+; -1.740 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.657      ;
+; -1.719 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.636      ;
+; -1.610 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.527      ;
+; -1.567 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.484      ;
+; -1.557 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.474      ;
+; -1.473 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.390      ;
+; -1.467 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.384      ;
+; -1.420 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.337      ;
+; -1.402 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.319      ;
+; -1.393 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 2.429      ;
+; -1.342 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.259      ;
+; -1.336 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.253      ;
+; -1.328 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.245      ;
+; -1.323 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.240      ;
+; -1.323 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.240      ;
+; -1.285 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 2.202      ;
+; -1.258 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 2.294      ;
+; -1.234 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 2.270      ;
+; -1.125 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 2.161      ;
+; -1.082 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 2.118      ;
+; -1.075 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 2.111      ;
+; -1.070 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 2.106      ;
+; -1.060 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 1.977      ;
+; -0.991 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 2.027      ;
+; -0.985 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 2.021      ;
+; -0.942 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.978      ;
+; -0.935 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.971      ;
+; -0.931 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.005     ; 1.848      ;
+; -0.871 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.907      ;
+; -0.857 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.893      ;
+; -0.851 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.887      ;
+; -0.846 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.882      ;
+; -0.841 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.877      ;
+; -0.838 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.874      ;
+; -0.803 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.839      ;
+; -0.800 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.836      ;
+; -0.783 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.819      ;
+; -0.729 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.765      ;
+; -0.712 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.748      ;
+; -0.699 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.735      ;
+; -0.670 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.706      ;
+; -0.658 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.694      ;
+; -0.641 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.677      ;
+; -0.628 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.664      ;
+; -0.599 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.635      ;
+; -0.599 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.635      ;
+; -0.578 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.614      ;
+; -0.570 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.606      ;
+; -0.557 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.593      ;
+; -0.556 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.592      ;
+; -0.528 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.564      ;
+; -0.528 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.564      ;
+; -0.499 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.535      ;
+; -0.486 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.522      ;
+; -0.485 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.521      ;
+; -0.457 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.493      ;
+; -0.457 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.493      ;
+; -0.422 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.458      ;
+; -0.415 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.451      ;
+; -0.414 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.450      ;
+; -0.071 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.107      ;
+; -0.071 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.107      ;
+; -0.039 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.075      ;
+; -0.031 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.067      ;
+; 0.235  ; counter:three_bit|Q[7]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.801      ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'KEY[2]'                                                                                                                               ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.535 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.801      ;
+; 0.801 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.067      ;
+; 0.809 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.075      ;
+; 0.841 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.107      ;
+; 0.841 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.107      ;
+; 1.184 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.450      ;
+; 1.185 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.451      ;
+; 1.192 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.458      ;
+; 1.227 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.493      ;
+; 1.227 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.493      ;
+; 1.255 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.521      ;
+; 1.256 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.522      ;
+; 1.269 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.535      ;
+; 1.298 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.564      ;
+; 1.298 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.564      ;
+; 1.326 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.592      ;
+; 1.327 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.593      ;
+; 1.340 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.606      ;
+; 1.348 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.614      ;
+; 1.369 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.635      ;
+; 1.369 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.635      ;
+; 1.398 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.664      ;
+; 1.411 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.677      ;
+; 1.428 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.694      ;
+; 1.440 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.706      ;
+; 1.469 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.735      ;
+; 1.471 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.737      ;
+; 1.478 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.744      ;
+; 1.482 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.748      ;
+; 1.499 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.765      ;
+; 1.553 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.819      ;
+; 1.570 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.836      ;
+; 1.573 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.839      ;
+; 1.611 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.877      ;
+; 1.616 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.882      ;
+; 1.621 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.887      ;
+; 1.627 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.893      ;
+; 1.641 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.907      ;
+; 1.705 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.971      ;
+; 1.712 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.978      ;
+; 1.750 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[1]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 1.848      ;
+; 1.757 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 2.023      ;
+; 1.761 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 2.027      ;
+; 1.840 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 2.106      ;
+; 1.845 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 2.111      ;
+; 1.852 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 2.118      ;
+; 1.879 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 1.977      ;
+; 1.888 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 2.154      ;
+; 1.895 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 2.161      ;
+; 2.005 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.103      ;
+; 2.009 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.107      ;
+; 2.028 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 2.294      ;
+; 2.104 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.202      ;
+; 2.142 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.240      ;
+; 2.147 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.245      ;
+; 2.155 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.253      ;
+; 2.161 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.259      ;
+; 2.221 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[1]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.319      ;
+; 2.239 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.337      ;
+; 2.291 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.389      ;
+; 2.292 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.390      ;
+; 2.376 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.474      ;
+; 2.386 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.484      ;
+; 2.422 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.520      ;
+; 2.429 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.527      ;
+; 2.559 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.005     ; 2.657      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'KEY[2]'                                                                              ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[2] ; Rise       ; KEY[2]                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[0]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[0]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[1]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[1]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[2]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[2]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[7]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[7]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~clk_delay_ctrl|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~clk_delay_ctrl|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~clk_delay_ctrl|clkout        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~clk_delay_ctrl|clkout        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~clkctrl|outclk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~clkctrl|outclk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; LEDR[0]|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; LEDR[0]|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; LEDR[1]|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; LEDR[1]|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; LEDR[2]|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; LEDR[2]|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[0]~_Duplicate_1|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[0]~_Duplicate_1|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[1]~_Duplicate_1|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[1]~_Duplicate_1|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[2]~_Duplicate_1|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[2]~_Duplicate_1|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[7]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[7]|clk                  ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[2]     ; 5.776 ; 5.776 ; Fall       ; KEY[2]          ;
+;  LEDR[0]  ; KEY[2]     ; 5.776 ; 5.776 ; Fall       ; KEY[2]          ;
+;  LEDR[1]  ; KEY[2]     ; 5.776 ; 5.776 ; Fall       ; KEY[2]          ;
+;  LEDR[2]  ; KEY[2]     ; 5.746 ; 5.746 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[2]     ; 5.746 ; 5.746 ; Fall       ; KEY[2]          ;
+;  LEDR[0]  ; KEY[2]     ; 5.776 ; 5.776 ; Fall       ; KEY[2]          ;
+;  LEDR[1]  ; KEY[2]     ; 5.776 ; 5.776 ; Fall       ; KEY[2]          ;
+;  LEDR[2]  ; KEY[2]     ; 5.746 ; 5.746 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; KEY[2] ; -0.384 ; -0.988        ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; KEY[2] ; 0.247 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; KEY[2] ; -1.222 ; -12.222              ;
++--------+--------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'KEY[2]'                                                                                                                               ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.384 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.292      ;
+; -0.352 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.260      ;
+; -0.308 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.216      ;
+; -0.294 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.202      ;
+; -0.294 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.202      ;
+; -0.274 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.182      ;
+; -0.233 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.141      ;
+; -0.213 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.121      ;
+; -0.208 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.116      ;
+; -0.178 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.086      ;
+; -0.177 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.085      ;
+; -0.171 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.079      ;
+; -0.163 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.071      ;
+; -0.152 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.060      ;
+; -0.151 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.059      ;
+; -0.147 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 1.055      ;
+; -0.053 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.085      ;
+; -0.040 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 0.948      ;
+; -0.021 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.053      ;
+; 0.015  ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.054     ; 0.893      ;
+; 0.023  ; counter:three_bit|Q[5]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.009      ;
+; 0.037  ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.995      ;
+; 0.037  ; counter:three_bit|Q[7]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.995      ;
+; 0.057  ; counter:three_bit|Q[4]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.975      ;
+; 0.060  ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.972      ;
+; 0.098  ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.934      ;
+; 0.110  ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.922      ;
+; 0.118  ; counter:three_bit|Q[3]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.914      ;
+; 0.123  ; counter:three_bit|Q[4]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.909      ;
+; 0.145  ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.887      ;
+; 0.154  ; counter:three_bit|Q[5]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.878      ;
+; 0.160  ; counter:three_bit|Q[6]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.872      ;
+; 0.168  ; counter:three_bit|Q[7]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.864      ;
+; 0.179  ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.853      ;
+; 0.180  ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.852      ;
+; 0.180  ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.852      ;
+; 0.184  ; counter:three_bit|Q[3]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.848      ;
+; 0.200  ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.832      ;
+; 0.215  ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.817      ;
+; 0.235  ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.797      ;
+; 0.239  ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.793      ;
+; 0.250  ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.782      ;
+; 0.253  ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.779      ;
+; 0.260  ; counter:three_bit|Q[3]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.772      ;
+; 0.270  ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.762      ;
+; 0.274  ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.758      ;
+; 0.291  ; counter:three_bit|Q[6]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.741      ;
+; 0.295  ; counter:three_bit|Q[3]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.737      ;
+; 0.305  ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.727      ;
+; 0.309  ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.723      ;
+; 0.312  ; counter:three_bit|Q[4]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.720      ;
+; 0.330  ; counter:three_bit|Q[5]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.702      ;
+; 0.330  ; counter:three_bit|Q[3]              ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.702      ;
+; 0.340  ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.692      ;
+; 0.344  ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.688      ;
+; 0.347  ; counter:three_bit|Q[4]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.685      ;
+; 0.365  ; counter:three_bit|Q[5]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.667      ;
+; 0.365  ; counter:three_bit|Q[3]              ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.667      ;
+; 0.377  ; counter:three_bit|Q[6]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.655      ;
+; 0.379  ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.653      ;
+; 0.382  ; counter:three_bit|Q[4]              ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.650      ;
+; 0.505  ; counter:three_bit|Q[5]              ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.527      ;
+; 0.505  ; counter:three_bit|Q[3]              ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.527      ;
+; 0.515  ; counter:three_bit|Q[6]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.517      ;
+; 0.520  ; counter:three_bit|Q[4]              ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.512      ;
+; 0.633  ; counter:three_bit|Q[7]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 0.399      ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'KEY[2]'                                                                                                                               ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.247 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.399      ;
+; 0.360 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.512      ;
+; 0.365 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.517      ;
+; 0.375 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.527      ;
+; 0.498 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.650      ;
+; 0.501 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.653      ;
+; 0.503 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.655      ;
+; 0.515 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.667      ;
+; 0.515 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.667      ;
+; 0.533 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.685      ;
+; 0.536 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.688      ;
+; 0.540 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.692      ;
+; 0.550 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.702      ;
+; 0.550 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.702      ;
+; 0.568 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.720      ;
+; 0.571 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.723      ;
+; 0.575 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.727      ;
+; 0.585 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.737      ;
+; 0.589 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.741      ;
+; 0.606 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.758      ;
+; 0.610 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.762      ;
+; 0.620 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.772      ;
+; 0.627 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.779      ;
+; 0.630 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[3]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.782      ;
+; 0.634 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.786      ;
+; 0.640 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.792      ;
+; 0.641 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.793      ;
+; 0.645 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.797      ;
+; 0.665 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.817      ;
+; 0.680 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.832      ;
+; 0.696 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.848      ;
+; 0.700 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.852      ;
+; 0.700 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.852      ;
+; 0.712 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.864      ;
+; 0.720 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.872      ;
+; 0.726 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.878      ;
+; 0.735 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.887      ;
+; 0.757 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.909      ;
+; 0.762 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.914      ;
+; 0.770 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.922      ;
+; 0.771 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.923      ;
+; 0.820 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.972      ;
+; 0.823 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.975      ;
+; 0.835 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.987      ;
+; 0.843 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 0.995      ;
+; 0.857 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.009      ;
+; 0.884 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[1]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 0.893      ;
+; 0.901 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.000      ; 1.053      ;
+; 0.939 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 0.948      ;
+; 0.984 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 0.993      ;
+; 0.990 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 0.999      ;
+; 1.046 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.055      ;
+; 1.050 ; counter:three_bit|Q[2]~_Duplicate_1 ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.059      ;
+; 1.062 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.071      ;
+; 1.070 ; counter:three_bit|Q[6]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.079      ;
+; 1.076 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.085      ;
+; 1.077 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[1]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.086      ;
+; 1.107 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.116      ;
+; 1.112 ; counter:three_bit|Q[3]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.121      ;
+; 1.121 ; counter:three_bit|Q[0]~_Duplicate_1 ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.130      ;
+; 1.173 ; counter:three_bit|Q[4]              ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.182      ;
+; 1.185 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.194      ;
+; 1.193 ; counter:three_bit|Q[7]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.202      ;
+; 1.207 ; counter:three_bit|Q[5]              ; counter:three_bit|Q[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.216      ;
+; 1.251 ; counter:three_bit|Q[1]~_Duplicate_1 ; counter:three_bit|Q[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.260      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'KEY[2]'                                                                              ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[2] ; Rise       ; KEY[2]                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[0]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[0]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[1]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[1]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[2]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[2]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[5]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[6]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[2] ; Fall       ; counter:three_bit|Q[7]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; counter:three_bit|Q[7]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~clk_delay_ctrl|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~clk_delay_ctrl|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~clk_delay_ctrl|clkout        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~clk_delay_ctrl|clkout        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~clkctrl|outclk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~clkctrl|outclk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; LEDR[0]|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; LEDR[0]|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; LEDR[1]|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; LEDR[1]|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; LEDR[2]|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; LEDR[2]|outclk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[0]~_Duplicate_1|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[0]~_Duplicate_1|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[1]~_Duplicate_1|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[1]~_Duplicate_1|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[2]~_Duplicate_1|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[2]~_Duplicate_1|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; three_bit|Q[7]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; three_bit|Q[7]|clk                  ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[2]     ; 3.344 ; 3.344 ; Fall       ; KEY[2]          ;
+;  LEDR[0]  ; KEY[2]     ; 3.344 ; 3.344 ; Fall       ; KEY[2]          ;
+;  LEDR[1]  ; KEY[2]     ; 3.344 ; 3.344 ; Fall       ; KEY[2]          ;
+;  LEDR[2]  ; KEY[2]     ; 3.314 ; 3.314 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[2]     ; 3.314 ; 3.314 ; Fall       ; KEY[2]          ;
+;  LEDR[0]  ; KEY[2]     ; 3.344 ; 3.344 ; Fall       ; KEY[2]          ;
+;  LEDR[1]  ; KEY[2]     ; 3.344 ; 3.344 ; Fall       ; KEY[2]          ;
+;  LEDR[2]  ; KEY[2]     ; 3.314 ; 3.314 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.878  ; 0.247 ; N/A      ; N/A     ; -1.222              ;
+;  KEY[2]          ; -1.878  ; 0.247 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -12.741 ; 0.0   ; 0.0      ; 0.0     ; -12.222             ;
+;  KEY[2]          ; -12.741 ; 0.000 ; N/A      ; N/A     ; -12.222             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[2]     ; 5.776 ; 5.776 ; Fall       ; KEY[2]          ;
+;  LEDR[0]  ; KEY[2]     ; 5.776 ; 5.776 ; Fall       ; KEY[2]          ;
+;  LEDR[1]  ; KEY[2]     ; 5.776 ; 5.776 ; Fall       ; KEY[2]          ;
+;  LEDR[2]  ; KEY[2]     ; 5.746 ; 5.746 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[2]     ; 3.314 ; 3.314 ; Fall       ; KEY[2]          ;
+;  LEDR[0]  ; KEY[2]     ; 3.344 ; 3.344 ; Fall       ; KEY[2]          ;
+;  LEDR[1]  ; KEY[2]     ; 3.344 ; 3.344 ; Fall       ; KEY[2]          ;
+;  LEDR[2]  ; KEY[2]     ; 3.314 ; 3.314 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[2]     ; KEY[2]   ; 0        ; 0        ; 0        ; 74       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[2]     ; KEY[2]   ; 0        ; 0        ; 0        ; 74       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 11    ; 11   ;
+; Unconstrained Output Ports      ; 3     ; 3    ;
+; Unconstrained Output Port Paths ; 3     ; 3    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Oct 12 10:44:23 2014
+Info: Command: quartus_sta Lab5_Part1 -c Lab5_Part1
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Lab5_Part1.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name KEY[2] KEY[2]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.878
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.878       -12.741 KEY[2] 
+Info (332146): Worst-case hold slack is 0.535
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.535         0.000 KEY[2] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -12.222 KEY[2] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.384
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.384        -0.988 KEY[2] 
+Info (332146): Worst-case hold slack is 0.247
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.247         0.000 KEY[2] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -12.222 KEY[2] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 410 megabytes
+    Info: Processing ended: Sun Oct 12 10:44:25 2014
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

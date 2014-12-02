@@ -1,0 +1,4 @@
+module Lab4_Part1(SW,LEDR,LEDG);
+
+
+endmodule

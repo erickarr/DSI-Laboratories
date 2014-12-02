@@ -1,0 +1,172 @@
+|Lab2_Part4
+SW[0] => SW[0].IN2
+SW[1] => SW[1].IN2
+SW[2] => SW[2].IN2
+SW[3] => SW[3].IN2
+SW[4] => SW[4].IN2
+SW[5] => SW[5].IN2
+SW[6] => SW[6].IN2
+SW[7] => SW[7].IN2
+SW[8] => cin.IN1
+LEDR[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= SW[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= SW[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= SW[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= SW[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= SW[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= SW[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= cin.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[0] <= LEDG[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= LEDG[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] <= LEDG[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[3] <= LEDG[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[4] <= LEDG[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[5] <= <GND>
+LEDG[6] <= <GND>
+LEDG[7] <= always0.DB_MAX_OUTPUT_PORT_TYPE
+HEX6[0] <= hexDisplay:h6.port1
+HEX6[1] <= hexDisplay:h6.port1
+HEX6[2] <= hexDisplay:h6.port1
+HEX6[3] <= hexDisplay:h6.port1
+HEX6[4] <= hexDisplay:h6.port1
+HEX6[5] <= hexDisplay:h6.port1
+HEX6[6] <= hexDisplay:h6.port1
+HEX6[7] <= hexDisplay:h6.port1
+HEX4[0] <= hexDisplay:h4.port1
+HEX4[1] <= hexDisplay:h4.port1
+HEX4[2] <= hexDisplay:h4.port1
+HEX4[3] <= hexDisplay:h4.port1
+HEX4[4] <= hexDisplay:h4.port1
+HEX4[5] <= hexDisplay:h4.port1
+HEX4[6] <= hexDisplay:h4.port1
+HEX4[7] <= hexDisplay:h4.port1
+HEX1[0] <= hexSumDisplay:h0.port2
+HEX1[1] <= hexSumDisplay:h0.port2
+HEX1[2] <= hexSumDisplay:h0.port2
+HEX1[3] <= hexSumDisplay:h0.port2
+HEX1[4] <= hexSumDisplay:h0.port2
+HEX1[5] <= hexSumDisplay:h0.port2
+HEX1[6] <= hexSumDisplay:h0.port2
+HEX1[7] <= hexSumDisplay:h0.port2
+HEX0[0] <= hexSumDisplay:h0.port1
+HEX0[1] <= hexSumDisplay:h0.port1
+HEX0[2] <= hexSumDisplay:h0.port1
+HEX0[3] <= hexSumDisplay:h0.port1
+HEX0[4] <= hexSumDisplay:h0.port1
+HEX0[5] <= hexSumDisplay:h0.port1
+HEX0[6] <= hexSumDisplay:h0.port1
+HEX0[7] <= hexSumDisplay:h0.port1
+
+
+|Lab2_Part4|adder:a0
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN0
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2_Part4|adder:a1
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN0
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2_Part4|adder:a2
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN0
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2_Part4|adder:a3
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN0
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2_Part4|hexDisplay:h4
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+hex[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2_Part4|hexDisplay:h6
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+hex[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2_Part4|hexSumDisplay:h0
+sum[0] => LessThan0.IN10
+sum[0] => Mod0.IN8
+sum[1] => LessThan0.IN9
+sum[1] => Mod0.IN7
+sum[2] => LessThan0.IN8
+sum[2] => Mod0.IN6
+sum[3] => LessThan0.IN7
+sum[3] => Mod0.IN5
+sum[4] => LessThan0.IN6
+sum[4] => Mod0.IN4
+hex0[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex0[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex0[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex0[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex0[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex0[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+hex1[0] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+hex1[1] <= <GND>
+hex1[2] <= <GND>
+hex1[3] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+hex1[4] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+hex1[5] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+hex1[6] <= <VCC>
+
+

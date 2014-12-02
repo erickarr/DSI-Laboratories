@@ -1,0 +1,6 @@
+module Lab2_Part2 (SW, HEX0);
+	input [17:0] SW;		// toggle switches
+	output [0:6] HEX0;	// 7-seg displays
+
+	assign LEDR = SW;
+endmodule

@@ -1,0 +1,79 @@
+\documentclass[oneside,letterpaper,12pt,titlepage]{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage[bookmarks,hidelinks]{hyperref}
+
+\begin{document}
+\author{Eric Karr}
+\title{Altera UP Lab 3}
+\date{\today}
+
+\maketitle
+
+\section{Lab 1}
+
+\subsection{Part 1}
+The switches 17-0 illuminate the red LEDs 17-0 respectively.
+
+\subsection{Part 2}
+A 2-1 multiplexer, SW[7-0] are one set of inputs while SW[15-8] are the other. SW[17] is the selector bit. The output is displayed on the green LEDs 7-0.
+
+\subsection{Part 3}
+A 3-bit wide 5-to-1 multiplexer is implemented in this lab. SW[14-0] are used for the five 3-bit inputs. SW[17-15] are used as our 3 selector pins.
+
+\subsection{Part 4}
+A three bit decoder module is implemented in this lab controlled by switches 2-0. The output of this result is displayed on HEX0.
+
+\subsection{Part 5}
+Switches 14-0 are used for five 3 bit inputs each of which are passed into a 5-1 multiplexer. The order of the letters displayed is changed by switches 17-15. 
+
+\subsection{Part 6}
+
+\section{Lab 2}
+\subsection{Part 1}
+Switches 15-0 compose four 4-bit groupings that select what is displayed on HEX3-HEX0 respectively.
+
+\subsection{Part 2}
+
+
+\subsection{Part 3}
+
+\subsection{Part 4}
+
+\subsection{Part 5}
+
+\subsection{Part 6}
+
+\subsection{Part 7}
+
+\section{Lab 3}
+
+\subsection{Part 1}
+
+\subsection{Part 2}
+
+\subsection{Part 3}
+
+\subsection{Part 4}
+
+\subsection{Part 5}
+When SW[17] is equal to one, hex displays 7-4 are being modified by the switches 15-0 after KEY0 (our clock) is pressed. When SW[17] is zero, the hex displays 3-0 are being modified by the values of the switches 15-0 after a clock pulse simulated by KEY0.
+
+\section{Lab 4}
+
+\section{Lab 5}
+
+\subsection{Part 1}
+In the main module the parameters \texttt{cntrBits} and \texttt{k} define the precision of the counter and the value the counter will reach before resetting respectively. The value of the counter is displayed on the red LEDs. The manual clock is attached to KEY2, and the reset is attached to KEY1.
+
+\subsection{Part 2}
+KEY 1 is used to reset the counter. Hex displays 2-0 display the count in BCD representation. When the counter reaches 999 it rolls over to 000.
+
+\subsection{Part 3}
+Works as a 24 hour clock, begins counting right away. The hour and minutes displays will take on the values of the switches initially.
+
+\end{document}

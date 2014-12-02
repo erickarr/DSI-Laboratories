@@ -1,0 +1,45 @@
+module Lab2_Part1 module Lab1_Part6 (SW, LEDR, HEX0);
+	input [17:0] SW; // toggle switches
+	output [17:0] LEDR;
+	output [6:0] HEX0; // 7-seg displays
+
+	assign LEDR = SW;
+endmodule
+
+// This method picks which letter is displayed in which of the five positions
+module mux_3bit_5to1 (S, U, V, W, X, Y, M);
+	input [2:0] S, U, V, W, X, Y;
+	output [2:0] M;
+	
+	reg [2:0] result;
+
+	always @(S)//Look uptable for selector bits
+		case(S)
+			4'b0000: result = U; //U (H)
+			4'b0001: result = V; //V (E)
+			4'b0010: result = W; //W (L)
+			4'b0011: result = X; //X (O)
+			default: result = Y;
+		endcase
+		
+	assign M = result;
+endmodule
+
+// implements a 7-segment decoder for H, E, L, O, and ‘blank’
+module char_7seg (C, Display);
+	input [2:0] C; // input code
+	output [6:0] Display; // output 7-seg code
+
+	reg[6:0] char;
+	
+	always @(C)//Look uptable for selector bits
+		case(C)
+			3'b000: char = 7'b0001001; //'H'
+			3'b001: char = 7'b0000110; //'E'
+			3'b011: char = 7'b1000111; //'L'
+			3'b010: char = 7'b1000000; //'O'
+			default: char = 7'b1111111; //''
+		endcase
+	
+	assign Display = char;
+endmodule
