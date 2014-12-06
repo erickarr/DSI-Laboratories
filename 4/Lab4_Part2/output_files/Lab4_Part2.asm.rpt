@@ -1,5 +1,5 @@
 Assembler report for Lab4_Part2
-Sat Oct 11 15:31:20 2014
+Fri Dec 05 20:20:24 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part2/output_files/Lab4_Part2.sof
-  6. Assembler Device Options: C:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part2/output_files/Lab4_Part2.pof
+  5. Assembler Device Options: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part2/output_files/Lab4_Part2.sof
+  6. Assembler Device Options: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part2/output_files/Lab4_Part2.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Oct 11 15:31:20 2014 ;
+; Assembler Status      ; Successful - Fri Dec 05 20:20:24 2014 ;
 ; Revision Name         ; Lab4_Part2                            ;
 ; Top-level Entity Name ; Lab4_Part2                            ;
 ; Family                ; Cyclone II                            ;
@@ -83,13 +83,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------------------------------------------------------------+
 ; File Name                                                                                                                                  ;
 +--------------------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part2/output_files/Lab4_Part2.sof ;
-; C:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part2/output_files/Lab4_Part2.pof ;
+; D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part2/output_files/Lab4_Part2.sof ;
+; D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part2/output_files/Lab4_Part2.pof ;
 +--------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part2/output_files/Lab4_Part2.sof ;
+; Assembler Device Options: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part2/output_files/Lab4_Part2.sof ;
 +----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                                                             ;
 +----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -100,7 +100,7 @@ applicable agreement for further details.
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part2/output_files/Lab4_Part2.pof ;
+; Assembler Device Options: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/4/Lab4_Part2/output_files/Lab4_Part2.pof ;
 +--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Option             ; Setting                                                                                                                                         ;
 +--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Oct 11 15:31:18 2014
+    Info: Processing started: Fri Dec 05 20:20:20 2014
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab4_Part2 -c Lab4_Part2
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 427 megabytes
-    Info: Processing ended: Sat Oct 11 15:31:20 2014
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 423 megabytes
+    Info: Processing ended: Fri Dec 05 20:20:24 2014
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 

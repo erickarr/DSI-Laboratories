@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.1.14)  5 DEC 2014 18:14
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.1.14)  5 DEC 2014 21:01
 entering extended mode
 **instructions.tex
 
@@ -374,47 +374,50 @@ tion (ECE 4740)\Labs\instructions.out")
 \@outlinefile=\write3
  [1
 
-{D:/Users/Eric/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]pdfTeX warnin
-g (ext4): destination with the same identifier (name{page.1}) has been already 
-used, duplicate ignored
+{D:/Users/Eric/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (10.51547pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/n/12 I used the Al-tera DE2 board to com-plete these labs. The one w
+ith the EP2C35F672C6N
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.46 \subsection
-                {Part 4} [1] [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 87.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 87.
+l.19 \end{abstract}
+                    [1]pdfTeX warning (ext4): destination with the same identif
+ier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.50 \subsection
+                {Part 4} [1] [2] [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
+ [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
 
 ("D:\Users\Eric\Dropbox\School\4th Year 1st Semester\Digital Systems Implementa
 tion (ECE 4740)\Labs\instructions.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 87.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 87.
-
-
-Package rerunfilecheck Warning: File `instructions.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `instructions.out':
-(rerunfilecheck)             Before: E911F22064DE2C81430E4434B3823B18;1372
-(rerunfilecheck)             After:  7A1DEE47B5907A39AB2BC2444752FAE4;1455.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 87.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
+Package rerunfilecheck Info: File `instructions.out' has not changed.
+(rerunfilecheck)             Checksum: 18B625C7858E1B02FA0FE892B315FE7A;1740.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
  ) 
 Here is how much of TeX's memory you used:
- 6099 strings out of 494045
- 88968 string characters out of 3145972
- 177115 words of memory out of 3000000
- 9329 multiletter control sequences out of 15000+200000
- 6990 words of font info for 26 fonts, out of 3000000 for 9000
+ 6110 strings out of 494045
+ 89115 string characters out of 3145972
+ 178115 words of memory out of 3000000
+ 9334 multiletter control sequences out of 15000+200000
+ 7159 words of font info for 27 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  29i,6n,43p,397b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Pr
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on instructions.pdf (4 pages, 59705 bytes).
+Output written on instructions.pdf (6 pages, 70812 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
+ 257 words of extra memory for PDF output out of 10000 (max. 10000000)
 

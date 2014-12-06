@@ -8,11 +8,15 @@
 \usepackage[bookmarks,hidelinks]{hyperref}
 
 \begin{document}
-\author{Eric Karr}
-\title{Altera UP Lab 3}
+\author{Eric Karr\\\texttt{7686559}}
+\title{Altera UP Labs\\Digital Systems Implementation\\ECE 4740}
 \date{\today}
 
 \maketitle
+
+\begin{abstract}
+I used the Altera DE2 board to complete these labs. The one with the EP2C35F672C6N chip. For Lab 3 Part 4 and potentially a few after that I used the Altera DE2-115 board, I switched back to the older Altera board because it was faster to synthesize code and program the FPGA.
+\end{abstract}
 
 \section{Lab 1}
 
@@ -58,18 +62,36 @@ A 6-bit number is represented by switches 5-0 and displayed on HEX1 and HEX0.
 \section{Lab 3}
 
 \subsection{Part 1}
+Switches 1 and 0 are the S and R inputs respectively for an SR latch. Switch 2 is used to simulate the clock, along with the outputs of the SR latch Q and Q bar on LEDG1 and LEDG0 respectively.
 
 \subsection{Part 2}
+A D flip flop is implemented in this lab. Switch 0 is the input D, switch 1 is the clock, and the outputs of the DFF Q and Q bar are displayed respectively on LEDG1 and LEDG0.
 
 \subsection{Part 3}
+This part is two flip flops cascaded. Switch 0 represents the input, switch 1 represents the clock. LEDG2 represents Qm, which is the output of the first flip flop going into the second flip flop. While LEDG1 and LEDG0 are the outputs of the final flip flop Q and Q bar respectively.
 
 \subsection{Part 4}
+The following part implements three different storage elements. The gated D latch which outputs to LEDG2. A positive-edge triggered D flip flop outputting to LEDG1, and a negative-edge triggered D flip flop outputting to LEDG0. The input used is SW[0] for D, and SW[1] is the clock.
 
 \subsection{Part 5}
 When SW[17] is equal to one, hex displays 7-4 are being modified by the switches 15-0 after KEY0 (our clock) is pressed. When SW[17] is zero, the hex displays 3-0 are being modified by the values of the switches 15-0 after a clock pulse simulated by KEY0.
 
 \section{Lab 4}
 
+\subsection{Part 1}
+Switch 1 is used as an enable, and switch 0 is used as the reset. Set both high initially, press KEY1 to increment the count. The count is displayed on HEX1 and HEX0, put SW[1] to zero to halt the counters incremental ability, and put SW[0] to zero to reset the counter back to zero. The count is also displayed in binary on the green LEDs.
+
+\subsection{Part 2}
+Same operation as part one, except for four digits. KEY1 increments the counter and HEX3-0 display the result. 
+
+\subsection{Part 3}
+A counter is implemented in software using the LPM.
+
+\subsection{Part 4}
+HEX0 is automatically incremented using a counter from 0-9 then it automatically rolls over.
+
+\subsection{Part 5}
+When the program is loaded the word ``HELLO'' automatically begins to scroll left across the HEX displays.
 
 \section{Lab 5}
 
