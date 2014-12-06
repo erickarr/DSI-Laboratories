@@ -70,6 +70,7 @@ When SW[17] is equal to one, hex displays 7-4 are being modified by the switches
 
 \section{Lab 4}
 
+
 \section{Lab 5}
 
 \subsection{Part 1}
@@ -79,6 +80,9 @@ In the main module the parameters \texttt{cntrBits} and \texttt{k} define the pr
 KEY 1 is used to reset the counter. Hex displays 2-0 display the count in BCD representation. When the counter reaches 999 it rolls over to 000.
 
 \subsection{Part 3}
-Works as a 24 hour clock, begins counting right away. The hour and minutes displays will take on the values of the switches initially.
+Works as a 24 hour clock, begins counting right away. The hour and minutes displays will take on the values of the switches initially. To initialize the clock, load desired values for the hour and minute onto switches 15-0 and press KEY1. Anytime values are to be loaded into the hour or minute use KEY1. You \textbf{must} initialize the clock with a KEY1 press.
+
+\subsection{Part 4}
+Use the switches 2-0 to select a letter A-H respectively. Press KEY1 to view the morse code for the letter selected on LEDR0. KEY0 is used as an asynchronous reset.
 
 \end{document}

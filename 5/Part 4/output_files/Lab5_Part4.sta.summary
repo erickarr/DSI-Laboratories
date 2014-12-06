@@ -2,4 +2,124 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow Model Setup 'counter_modk:C2|Q[1]'
+Slack : -4.005
+TNS   : -4.005
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -3.246
+TNS   : -48.475
+
+Type  : Slow Model Setup 'counter_modk:C1|Q[0]'
+Slack : -1.406
+TNS   : -3.809
+
+Type  : Slow Model Setup 'half'
+Slack : 1.427
+TNS   : 0.000
+
+Type  : Slow Model Hold 'half'
+Slack : -1.157
+TNS   : -1.157
+
+Type  : Slow Model Hold 'counter_modk:C1|Q[0]'
+Slack : -1.141
+TNS   : -1.270
+
+Type  : Slow Model Hold 'counter_modk:C2|Q[1]'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : 0.802
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'counter_modk:C1|Q[0]'
+Slack : -1.314
+TNS   : -4.370
+
+Type  : Slow Model Removal 'counter_modk:C1|Q[0]'
+Slack : 1.141
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -28.380
+
+Type  : Slow Model Minimum Pulse Width 'KEY[1]'
+Slack : -1.222
+TNS   : -9.222
+
+Type  : Slow Model Minimum Pulse Width 'counter_modk:C1|Q[0]'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Slow Model Minimum Pulse Width 'half'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Slow Model Minimum Pulse Width 'counter_modk:C2|Q[1]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'counter_modk:C2|Q[1]'
+Slack : -1.900
+TNS   : -1.900
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -1.012
+TNS   : -10.365
+
+Type  : Fast Model Setup 'counter_modk:C1|Q[0]'
+Slack : -0.375
+TNS   : -0.749
+
+Type  : Fast Model Setup 'half'
+Slack : 0.995
+TNS   : 0.000
+
+Type  : Fast Model Hold 'counter_modk:C1|Q[0]'
+Slack : -0.880
+TNS   : -1.186
+
+Type  : Fast Model Hold 'half'
+Slack : -0.615
+TNS   : -0.615
+
+Type  : Fast Model Hold 'counter_modk:C2|Q[1]'
+Slack : 0.068
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : 0.361
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'counter_modk:C1|Q[0]'
+Slack : -0.445
+TNS   : -0.898
+
+Type  : Fast Model Removal 'counter_modk:C1|Q[0]'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -28.380
+
+Type  : Fast Model Minimum Pulse Width 'KEY[1]'
+Slack : -1.222
+TNS   : -9.222
+
+Type  : Fast Model Minimum Pulse Width 'counter_modk:C1|Q[0]'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Fast Model Minimum Pulse Width 'half'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'counter_modk:C2|Q[1]'
+Slack : 0.500
+TNS   : 0.000
+
 ------------------------------------------------------------

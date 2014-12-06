@@ -10,14 +10,7 @@ module Lab5_Part3(SW,LEDR,LEDG,KEY,HEX7,HEX6,HEX5,HEX4,HEX3,HEX2,CLOCK_50);
 	reg [3:0] sec0, sec1, min0, min1, hr0, hr1;
 	reg [3:0] sec0Init;
 	reg cnt;
-	//integer test = 4;
-	
-
-	/*always @ (SW) begin
-		sec0Init = SW[3:0];
-	end*/
-			
-	assign LEDG[3:0] = sec0;
+	wire resetKey = ~KEY[1];
 	
 	hexDisplay s0(sec0,HEX2);
 	hexDisplay s1(sec1,HEX3);
@@ -37,8 +30,13 @@ module Lab5_Part3(SW,LEDR,LEDG,KEY,HEX7,HEX6,HEX5,HEX4,HEX3,HEX2,CLOCK_50);
 		end
 	end
 	
-	always @ (posedge cnt) begin
-		if(hr1 == 2 && hr0 == 3 && min1 == 5 && min0 == 9 && sec1 == 5 && sec0 == 9) begin
+	always @ (posedge cnt or posedge resetKey) begin
+		if(resetKey) begin
+			min0 <= SW[3:0];
+			min1 <= SW[7:4];
+			hr0 <= SW[11:8];
+			hr1 <= SW[15:12];
+		end else if(hr1 == 2 && hr0 == 3 && min1 == 5 && min0 == 9 && sec1 == 5 && sec0 == 9) begin
 			hr1 <= 0;
 			hr0 <= 0;
 			min1 <= 0;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab5_Part3
-Mon Nov 24 22:49:20 2014
+Fri Dec 05 14:13:37 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,14 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,20 +43,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Nov 24 22:49:20 2014               ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 05 14:13:37 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Lab5_Part3                                      ;
 ; Top-level Entity Name              ; Lab5_Part3                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 193                                             ;
+;     Total combinational functions  ; 193                                             ;
+;     Dedicated logic registers      ; 57                                              ;
+; Total registers                    ; 57                                              ;
+; Total pins                         ; 87                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -150,61 +156,163 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                            ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; Lab5_Part3.v                     ; yes             ; User Verilog HDL File  ; D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/5/Part 3/Lab5_Part3.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 193    ;
+;                                             ;        ;
+; Total combinational functions               ; 193    ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 112    ;
+;     -- 3 input functions                    ; 27     ;
+;     -- <=2 input functions                  ; 54     ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 162    ;
+;     -- arithmetic mode                      ; 31     ;
+;                                             ;        ;
+; Total registers                             ; 57     ;
+;     -- Dedicated logic registers            ; 57     ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 87     ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+; Maximum fan-out node                        ; KEY[1] ;
+; Maximum fan-out                             ; 53     ;
+; Total fan-out                               ; 829    ;
+; Average fan-out                             ; 2.46   ;
++---------------------------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                               ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; |Lab5_Part3                ; 193 (151)         ; 57 (57)      ; 0           ; 0            ; 0       ; 0         ; 87   ; 0            ; |Lab5_Part3               ; work         ;
+;    |hexDisplay:h0|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab5_Part3|hexDisplay:h0 ; work         ;
+;    |hexDisplay:h1|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab5_Part3|hexDisplay:h1 ; work         ;
+;    |hexDisplay:m0|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab5_Part3|hexDisplay:m0 ; work         ;
+;    |hexDisplay:m1|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab5_Part3|hexDisplay:m1 ; work         ;
+;    |hexDisplay:s0|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab5_Part3|hexDisplay:s0 ; work         ;
+;    |hexDisplay:s1|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab5_Part3|hexDisplay:s1 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 57    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 7     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |Lab5_Part3|sec1[3]        ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |Lab5_Part3|sec0[3]        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab5_Part3|hr1[3]         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Lab5_Part3|hr0[3]         ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Lab5_Part3|min1[3]        ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Lab5_Part3|min0[3]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Nov 24 22:49:18 2014
+    Info: Processing started: Fri Dec 05 14:13:33 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab5_Part3 -c Lab5_Part3
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 2 entities, in source file lab5_part3.v
     Info (12023): Found entity 1: Lab5_Part3
     Info (12023): Found entity 2: hexDisplay
 Info (12127): Elaborating entity "Lab5_Part3" for the top level hierarchy
-Warning (10646): Verilog HDL Event Control warning at Lab5_Part3.v(40): posedge or negedge of vector "SW" depends solely on its least-significant bit
-Error (10200): Verilog HDL Conditional Statement error at Lab5_Part3.v(42): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/5/Part 3/Lab5_Part3.v Line: 42
-Warning (10230): Verilog HDL assignment warning at Lab5_Part3.v(50): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at Lab5_Part3.v(56): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at Lab5_Part3.v(63): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at Lab5_Part3.v(69): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at Lab5_Part3.v(74): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Lab5_Part3.v(47): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Lab5_Part3.v(53): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Lab5_Part3.v(60): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Lab5_Part3.v(66): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Lab5_Part3.v(71): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Lab5_Part3.v(75): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at Lab5_Part3.v(78): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at Lab5_Part3.v(81): truncated value with size 32 to match size of target (4)
-Warning (10240): Verilog HDL Always Construct warning at Lab5_Part3.v(40): inferring latch(es) for variable "hr1", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Lab5_Part3.v(40): inferring latch(es) for variable "hr0", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Lab5_Part3.v(40): inferring latch(es) for variable "min1", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Lab5_Part3.v(40): inferring latch(es) for variable "min0", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Lab5_Part3.v(40): inferring latch(es) for variable "sec1", which holds its previous value in one or more paths through the always construct
-Warning (10034): Output port "LEDG[7..4]" at Lab5_Part3.v(6) has no driver
-Info (10041): Inferred latch for "sec1[0]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "sec1[1]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "sec1[2]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "sec1[3]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "min0[0]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "min0[1]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "min0[2]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "min0[3]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "min1[0]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "min1[1]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "min1[2]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "min1[3]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "hr0[0]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "hr0[1]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "hr0[2]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "hr0[3]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "hr1[0]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "hr1[1]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "hr1[2]" at Lab5_Part3.v(40)
-Info (10041): Inferred latch for "hr1[3]" at Lab5_Part3.v(40)
-Error (12153): Can't elaborate top-level user hierarchy
+Warning (10034): Output port "LEDG" at Lab5_Part3.v(6) has no driver
+Info (12128): Elaborating entity "hexDisplay" for hierarchy "hexDisplay:s0"
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "hr1[0]" is converted into an equivalent circuit using register "hr1[0]~_emulated" and latch "hr1[0]~1"
+    Warning (13310): Register "hr1[1]" is converted into an equivalent circuit using register "hr1[1]~_emulated" and latch "hr1[1]~5"
+    Warning (13310): Register "hr1[2]" is converted into an equivalent circuit using register "hr1[2]~_emulated" and latch "hr1[2]~9"
+    Warning (13310): Register "hr1[3]" is converted into an equivalent circuit using register "hr1[3]~_emulated" and latch "hr1[3]~13"
+    Warning (13310): Register "hr0[0]" is converted into an equivalent circuit using register "hr0[0]~_emulated" and latch "hr0[0]~1"
+    Warning (13310): Register "hr0[1]" is converted into an equivalent circuit using register "hr0[1]~_emulated" and latch "hr0[1]~5"
+    Warning (13310): Register "hr0[2]" is converted into an equivalent circuit using register "hr0[2]~_emulated" and latch "hr0[2]~9"
+    Warning (13310): Register "hr0[3]" is converted into an equivalent circuit using register "hr0[3]~_emulated" and latch "hr0[3]~13"
+    Warning (13310): Register "min1[0]" is converted into an equivalent circuit using register "min1[0]~_emulated" and latch "min1[0]~1"
+    Warning (13310): Register "min1[1]" is converted into an equivalent circuit using register "min1[1]~_emulated" and latch "min1[1]~5"
+    Warning (13310): Register "min1[2]" is converted into an equivalent circuit using register "min1[2]~_emulated" and latch "min1[2]~9"
+    Warning (13310): Register "min1[3]" is converted into an equivalent circuit using register "min1[3]~_emulated" and latch "min1[3]~13"
+    Warning (13310): Register "min0[0]" is converted into an equivalent circuit using register "min0[0]~_emulated" and latch "min0[0]~1"
+    Warning (13310): Register "min0[1]" is converted into an equivalent circuit using register "min0[1]~_emulated" and latch "min0[1]~5"
+    Warning (13310): Register "min0[2]" is converted into an equivalent circuit using register "min0[2]~_emulated" and latch "min0[2]~9"
+    Warning (13310): Register "min0[3]" is converted into an equivalent circuit using register "min0[3]~_emulated" and latch "min0[3]~13"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDG[0]" is stuck at GND
+    Warning (13410): Pin "LEDG[1]" is stuck at GND
+    Warning (13410): Pin "LEDG[2]" is stuck at GND
+    Warning (13410): Pin "LEDG[3]" is stuck at GND
+    Warning (13410): Pin "LEDG[4]" is stuck at GND
+    Warning (13410): Pin "LEDG[5]" is stuck at GND
+    Warning (13410): Pin "LEDG[6]" is stuck at GND
+    Warning (13410): Pin "LEDG[7]" is stuck at GND
 Info (144001): Generated suppressed messages file D:/Users/Eric/Dropbox/School/4th Year 1st Semester/Digital Systems Implementation (ECE 4740)/Labs/5/Part 3/output_files/Lab5_Part3.map.smsg
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 15 warnings
-    Error: Peak virtual memory: 415 megabytes
-    Error: Processing ended: Mon Nov 24 22:49:20 2014
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:02
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+Info (21057): Implemented 280 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 21 input pins
+    Info (21059): Implemented 66 output pins
+    Info (21061): Implemented 193 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 450 megabytes
+    Info: Processing ended: Fri Dec 05 14:13:37 2014
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +------------------------------------------+

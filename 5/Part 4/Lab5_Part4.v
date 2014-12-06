@@ -1,44 +1,106 @@
-module Lab5_Part4(SW,LEDR,KEY,CLOCK_50);
-	input [3:0] KEY;
-	input CLOCK_50;
-	input [2:0] SW;
-	output [17:0] LEDR;
-	
-	wire [2:0] letter;
-	wire clk;
-	
-	reg light;
-	
-	integer length,cntr;
-	
-	assign letter = SW[2:0];
-	assign clk = ~KEY[2];
-	assign LEDR[0] = light;
-	
-	always @ (posedge clk) begin
-		case(letter)
-			3'b000: begin
-						light = 1;
-						#50000000000000000000000000 light = 0;
-					end
-			3'b001:light = 0;
-			3'b010:;
-			3'b011:;
-			3'b100:;
-			3'b101:;
-			3'b110:;
-			3'b111:;
-		endcase
-	end
-	
-	/*always @ (posedge CLOCK_50) begin
-		cntr <= cntr + 1;
-		
-		if(cntr == length) begin
-			light = 0;
-			cntr <= 0;
-		end
-	end*/
-	
-	assign LEDR[0] = light;
+module Lab5_Part4 (CLOCK_50, KEY, SW, LEDR, HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0);
+  input CLOCK_50;
+  input [3:0] KEY;
+  input [2:0] SW;
+  output reg [17:0] LEDR;
+  output [0:6] HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0;
+
+  wire [25:0] HALFSEC;
+  wire HALFPULSE;
+  wire [3:0] INDEX;
+
+  wire reset;
+
+  reg half;
+  reg [13:0] SIGNAL;
+
+  // generate half second clock
+  counter_modk C0 (CLOCK_50, KEY[0], HALFSEC);
+  defparam C0.n = 26;
+  defparam C0.k = 25000000;
+
+  // generate half second pulse (full second signal with 50% duty cycle)
+  counter_modk C1 (half, KEY[0], HALFPULSE);
+  defparam C1.n = 1;
+  defparam C1.k = 2;
+
+  always @ (negedge CLOCK_50) begin
+    if (HALFSEC == 24999999)
+      half = 1;
+    else
+      half = 0;
+  end
+
+  always @ (negedge KEY[1]) begin
+    case (SW[2:0])
+      0: SIGNAL = 14'b00101100000000; // A
+      1: SIGNAL = 14'b00110101010000; // B
+      2: SIGNAL = 14'b00110101101000; // C
+      3: SIGNAL = 14'b00110101000000; // D
+      4: SIGNAL = 14'b00100000000000; // E
+      5: SIGNAL = 14'b00101011010000; // F
+      6: SIGNAL = 14'b00110110100000; // G
+      7: SIGNAL = 14'b00101010100000; // H
+    endcase
+  end
+
+  assign reset = KEY[1] && KEY[0];
+
+  counter_modk C2 (HALFPULSE, reset, INDEX);
+  defparam C2.n = 4;
+  defparam C2.k = 14;
+
+  always begin
+    case (INDEX)
+      0:LEDR[0] = SIGNAL[13];
+      1:LEDR[0] = SIGNAL[12];
+      2:LEDR[0] = SIGNAL[11];
+      3:LEDR[0] = SIGNAL[10];
+      4:LEDR[0] = SIGNAL[9];
+      5:LEDR[0] = SIGNAL[8];
+      6:LEDR[0] = SIGNAL[7];
+      7:LEDR[0] = SIGNAL[6];
+      8:LEDR[0] = SIGNAL[5];
+      9:LEDR[0] = SIGNAL[4];
+      10:LEDR[0] = SIGNAL[3];
+      11:LEDR[0] = SIGNAL[2];
+      12:LEDR[0] = SIGNAL[1];
+      13:LEDR[0] = SIGNAL[0];
+    endcase
+  end
+endmodule
+
+module b2d_ssd (X, SSD);
+  input [3:0] X;
+  output reg [0:6] SSD;
+
+  always begin
+    case(X)
+      0:SSD=7'b0000001;
+      1:SSD=7'b1001111;
+      2:SSD=7'b0010010;
+      3:SSD=7'b0000110;
+      4:SSD=7'b1001100;
+      5:SSD=7'b0100100;
+      6:SSD=7'b0100000;
+      7:SSD=7'b0001111;
+      8:SSD=7'b0000000;
+      9:SSD=7'b0001100;
+    endcase
+  end
+endmodule
+
+module twodigit_b2d_ssd (X, SSD1, SSD0);
+  input [6:0] X;
+  output [0:6] SSD1, SSD0;
+
+  reg [3:0] ONES, TENS;
+
+  always begin
+    ONES = X % 10;
+    TENS = (X - ONES) / 10;
+  end
+
+  b2d_ssd B1 (TENS, SSD1);
+  b2d_ssd B0 (ONES, SSD0);
 endmodule
